@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#23663b">
+  <meta name="description" content="Entiende cómo funciona el seguro paramétrico de café del Modelo de Compensación Campesina - MCC.">
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Conoce tu seguro · MCC</title>
+  <script src="js/seguro.js" defer></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-cloud-rain" viewBox="0 0 24 24"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-map-pinned" viewBox="0 0 24 24"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"/></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></symbol>
+    <symbol id="i-circle-check-big" viewBox="0 0 24 24"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="site-header wrap">
+    <div class="header-identity">
+      <a href="index.html" class="site-brand" aria-label="Innterra, inicio">
+        <img src="assets/innterra.svg" alt="Innterra" width="56" height="57">
+      </a>
+      <div class="program-heading">
+        <strong>Seguro paramétrico de café</strong>
+        <span>Modelo de Compensación Campesina - MCC</span>
+      </div>
+    </div>
+    <nav aria-label="Navegación principal">
+      <a href="seguro.html" aria-current="page">Conoce tu seguro</a>
+      <a class="nav-help" href="https://wa.me/573143329279" target="_blank" rel="noopener noreferrer">
+        <svg class="icon-wa" width="18" height="18" aria-hidden="true"><use href="#i-wa"/></svg> Ayuda
+      </a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="wrap page-intro">
+      <div class="breadcrumb"><a href="index.html">Inicio</a> / Conoce tu seguro</div>
+      <span class="eyebrow">EL CLIMA CAMBIA. TU RESPALDO CONTINÚA.</span>
+      <h1>Entiende tu seguro.<br><em>Con tranquilidad.</em></h1>
+      <p>Un seguro que usa la información de lluvia de tu zona para determinar cuándo se activa una compensación.</p>
+      <div>
+        <button type="button" class="audio-button" id="audio-boton" aria-pressed="false">
+          <svg class="icon" width="20" height="20" aria-hidden="true"><use id="audio-icono" href="#i-volume-2"/></svg>
+          <span>
+            <span id="audio-texto">Escuchar explicación</span>
+            <small class="audio-detail">Audio del programa</small>
+          </span>
+        </button>
+        <audio id="audio-explicacion" src="audio/conoce-tu-seguro.mp3" preload="none"></audio>
+      </div>
+    </section>
+
+    <section class="wrap section learn-overview">
+      <div class="learn-photo" role="img" aria-label="Paisaje cafetero, imagen generada"></div>
+      <div>
+        <span class="eyebrow">MODELO DE COMPENSACIÓN CAMPESINA - MCC</span>
+        <h2>Un respaldo para<br>tu trabajo en el campo.</h2>
+        <p>El Modelo de Compensación Campesina es un seguro paramétrico para productores de café. Protege frente al <strong>exceso y al déficit de lluvia</strong>, según las condiciones del programa.</p>
+        <div class="notice">
+          <svg class="icon" width="20" height="20" aria-hidden="true"><use href="#i-check"/></svg> No tienes que medir ni reportar cuánto llovió.
+        </div>
+        <p class="caption">La compensación depende del índice climático y de las reglas del programa.</p>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <span class="eyebrow">ASÍ FUNCIONA</span>
+        <h2>La lluvia nos da la información.</h2>
+      </div>
+      <div class="three-col">
+        <article class="panel">
+          <span class="step-number">01</span>
+          <svg class="icon" width="28" height="28" aria-hidden="true"><use href="#i-map-pinned"/></svg>
+          <h3>Miramos tu zona</h3>
+          <p>Las fincas se asocian a información climática de su ubicación.</p>
+        </article>
+        <article class="panel">
+          <span class="step-number">02</span>
+          <svg class="icon" width="28" height="28" aria-hidden="true"><use href="#i-cloud-rain"/></svg>
+          <h3>Aplicamos las reglas</h3>
+          <p>Innterra analiza la lluvia y aplica los niveles definidos para cada etapa y grupo.</p>
+        </article>
+        <article class="panel">
+          <span class="step-number">03</span>
+          <svg class="icon" width="28" height="28" aria-hidden="true"><use href="#i-shield-check"/></svg>
+          <h3>Se determina la activación</h3>
+          <p>Cuando se cumplen las condiciones, puede corresponder una compensación.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="rain-section">
+      <div class="wrap rain-layout">
+        <div>
+          <span class="eyebrow">PRUÉBALO TÚ MISMO</span>
+          <h2>¿Qué pasa cuando<br>cambia la lluvia?</h2>
+          <p>Mueve el control. Verás cuándo se activa el ejemplo y cuándo no.</p>
+          <div class="notice">Estos ejemplos usan cifras ficticias. No representan tu cobertura ni una promesa de pago.</div>
+          <details>
+            <summary>¿Y si veo una afectación en mi cultivo?</summary>
+            <p>La afectación visible y el índice pueden ser diferentes. Puede haber una afectación sin activación, o una activación sin una inspección tradicional.</p>
+          </details>
+        </div>
+
+        <div>
+          <div class="rain-tabs" role="tablist" aria-label="Ejemplos de lluvia">
+            <button type="button" role="tab" id="tab-excess" aria-controls="panel-excess" aria-selected="true">
+              <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-cloud-rain"/></svg> Exceso de lluvia
+            </button>
+            <button type="button" role="tab" id="tab-deficit" aria-controls="panel-deficit" aria-selected="false" tabindex="-1">
+              <svg class="icon" width="18" height="18" aria-hidden="true"><use href="#i-sun"/></svg> Déficit de lluvia
+            </button>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-excess" aria-labelledby="tab-excess">
+            <div class="rain-example" data-kind="excess">
+              <div class="rain-top">
+                <div class="icon-circle"><svg class="icon" width="28" height="28" aria-hidden="true"><use href="#i-cloud-rain"/></svg></div>
+                <div>
+                  <h3>Cuando sobra la lluvia</h3>
+                  <p>La lluvia acumulada aumenta.</p>
+                </div>
+              </div>
+              <div class="rain-chart" role="img" data-rol="grafico">
+                <div class="rain-axis"><span>200 mm</span><span>100 mm</span><span>0 mm</span></div>
+                <div class="rain-bars">
+                  <div class="rain-fill" data-rol="relleno"></div>
+                  <div class="rain-reference" style="bottom:60%"><span>Nivel del ejemplo · 120 mm</span></div>
+                  <div class="rain-value"><span data-rol="valor">80</span> <small>mm</small></div>
+                </div>
+                <div class="crop-marker">
+                  <svg class="icon" width="48" height="48" aria-hidden="true"><use href="#i-sprout"/></svg>
+                  <span>Cultivo</span>
+                </div>
+              </div>
+              <label class="slider-label" for="lluvia-excess">Mueve la lluvia y mira qué ocurre</label>
+              <input class="rain-slider" id="lluvia-excess" type="range" min="0" max="200" step="5" value="80">
+              <div class="slider-ends"><span>Menos lluvia</span><span>Más lluvia</span></div>
+              <div class="rain-status" role="status" data-rol="estado">
+                <svg class="icon" width="22" height="22" aria-hidden="true"><use data-rol="estado-icono" href="#i-cloud-rain"/></svg>
+                <span><strong data-rol="estado-titulo">No hay activación</strong><small data-rol="estado-detalle">La lluvia no cruza el nivel de activación del ejemplo.</small></span>
+              </div>
+              <div class="compensation-example">
+                <div class="compensation-heading">
+                  <strong>Compensación del ejemplo</strong>
+                  <span data-rol="compensacion-texto">Sin compensación</span>
+                </div>
+                <div class="compensation-meter" role="progressbar" aria-label="Compensación ilustrativa" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-rol="medidor">
+                  <span style="width:0%" data-rol="medidor-barra"></span>
+                </div>
+                <div class="compensation-ends"><span>Menor</span><span>Mayor</span></div>
+                <p>Después de cruzar el nivel, cuanto más sube la lluvia, mayor es la compensación del ejemplo.</p>
+              </div>
+              <div class="example-notice">Ejemplo ilustrativo. Esta barra no representa un monto ni una escala de pago real. Los niveles y la compensación reales dependen de las condiciones del programa y de tu ubicación.</div>
+            </div>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-deficit" aria-labelledby="tab-deficit" hidden>
+            <div class="rain-example" data-kind="deficit">
+              <div class="rain-top">
+                <div class="icon-circle"><svg class="icon" width="28" height="28" aria-hidden="true"><use href="#i-sun"/></svg></div>
+                <div>
+                  <h3>Cuando falta la lluvia</h3>
+                  <p>La lluvia acumulada disminuye.</p>
+                </div>
+              </div>
+              <div class="rain-chart" role="img" data-rol="grafico">
+                <div class="rain-axis"><span>200 mm</span><span>100 mm</span><span>0 mm</span></div>
+                <div class="rain-bars">
+                  <div class="rain-fill" data-rol="relleno"></div>
+                  <div class="rain-reference" style="bottom:20%"><span>Nivel del ejemplo · 40 mm</span></div>
+                  <div class="rain-value"><span data-rol="valor">90</span> <small>mm</small></div>
+                </div>
+                <div class="crop-marker">
+                  <svg class="icon" width="48" height="48" aria-hidden="true"><use href="#i-sprout"/></svg>
+                  <span>Cultivo</span>
+                </div>
+              </div>
+              <label class="slider-label" for="lluvia-deficit">Mueve la lluvia y mira qué ocurre</label>
+              <input class="rain-slider" id="lluvia-deficit" type="range" min="0" max="200" step="5" value="90">
+              <div class="slider-ends"><span>Menos lluvia</span><span>Más lluvia</span></div>
+              <div class="rain-status" role="status" data-rol="estado">
+                <svg class="icon" width="22" height="22" aria-hidden="true"><use data-rol="estado-icono" href="#i-cloud-rain"/></svg>
+                <span><strong data-rol="estado-titulo">No hay activación</strong><small data-rol="estado-detalle">La lluvia no cruza el nivel de activación del ejemplo.</small></span>
+              </div>
+              <div class="compensation-example">
+                <div class="compensation-heading">
+                  <strong>Compensación del ejemplo</strong>
+                  <span data-rol="compensacion-texto">Sin compensación</span>
+                </div>
+                <div class="compensation-meter" role="progressbar" aria-label="Compensación ilustrativa" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-rol="medidor">
+                  <span style="width:0%" data-rol="medidor-barra"></span>
+                </div>
+                <div class="compensation-ends"><span>Menor</span><span>Mayor</span></div>
+                <p>Después de cruzar el nivel, cuanto más baja la lluvia, mayor es la compensación del ejemplo.</p>
+              </div>
+              <div class="example-notice">Ejemplo ilustrativo. Esta barra no representa un monto ni una escala de pago real. Los niveles y la compensación reales dependen de las condiciones del programa y de tu ubicación.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section two-col">
+      <div>
+        <span class="eyebrow">CADA ZONA TIENE SUS CONDICIONES</span>
+        <h2>El cultivo tiene<br>distintos momentos.</h2>
+        <p>En la floración, el programa contempla el exceso de lluvia. En el desarrollo y llenado, contempla el déficit.</p>
+        <p>Los periodos y niveles cambian por ubicación, etapa y grupo. Para conocer las condiciones que corresponden a tu finca, escríbenos.</p>
+        <a class="button primary" href="https://wa.me/573143329279" target="_blank" rel="noopener noreferrer">
+          <svg class="icon-wa" width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Consultar mis condiciones
+        </a>
+      </div>
+      <div class="panel">
+        <img class="calculation-agent-logo" src="assets/innterra.svg" alt="Innterra" width="40" height="40">
+        <h3>Innterra es el agente de cálculo.</h3>
+        <p>Analiza la información climática definida para el seguro y aplica las reglas del programa para determinar cuándo se presenta una activación.</p>
+        <p><strong>No decide discrecionalmente quién recibe una compensación.</strong></p>
+        <details>
+          <summary>Más sobre la información climática</summary>
+          <p>El programa utiliza CHIRPS, una fuente especializada que combina información de satélites y estaciones meteorológicas para estimar la lluvia. Los datos se agrupan según la ubicación de las fincas.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <span class="eyebrow">RESOLVAMOS TUS DUDAS</span>
+        <h2>Preguntas que puedes tener.</h2>
+      </div>
+      <div class="faq narrow" style="margin:auto">
+        <details>
+          <summary>¿Tengo que avisar cuando llueve mucho o hay sequía?</summary>
+          <p>No necesitas reportar personalmente la lluvia ni la sequía. El cálculo utiliza información climática especializada de tu zona.</p>
+        </details>
+        <details>
+          <summary>¿Cómo saben cuánto llovió en mi zona?</summary>
+          <p>El programa usa información climática de fuentes especializadas. Esa información se asocia a la ubicación de las fincas y se analiza por grupos de la región.</p>
+        </details>
+        <details>
+          <summary>¿Necesitan visitar mi finca para determinar una activación?</summary>
+          <p>La activación se determina con información climática y las reglas del programa. No depende de una inspección posterior de los daños de tu cultivo.</p>
+        </details>
+        <details>
+          <summary>¿Por qué puede haber una afectación y no activarse el seguro?</summary>
+          <p>La afectación que ves en la finca puede ser distinta a lo que mide el índice de lluvia de tu grupo. Si ese índice no supera el nivel definido, el seguro no se activa, aunque exista una afectación visible.</p>
+        </details>
+        <details>
+          <summary>¿Qué es una compensación?</summary>
+          <p>Es el valor que puede corresponder cuando se cumplen las condiciones de activación del programa. Los ejemplos de esta página no representan un pago personal ni prometen una compensación.</p>
+        </details>
+        <details>
+          <summary>¿Quiénes acompañan el programa?</summary>
+          <p>La Previsora es la aseguradora. FINAGRO apoya la financiación mediante el Incentivo al Seguro Agropecuario. La Federación Nacional de Cafeteros brinda respaldo institucional. Innterra opera la tecnología y el cálculo climático.</p>
+        </details>
+        <details>
+          <summary>¿Qué hace Innterra como agente de cálculo?</summary>
+          <p>Innterra analiza la información climática definida para el seguro y aplica las reglas del programa. No decide discrecionalmente quién recibe una compensación.</p>
+        </details>
+        <details>
+          <summary>¿Dónde puedo recibir ayuda?</summary>
+          <p>Puedes escribir al WhatsApp oficial: +57 314 332 9279. También puedes hacerlo si tus datos no coinciden.</p>
+          <a class="button primary" href="https://wa.me/573143329279" target="_blank" rel="noopener noreferrer">
+            <svg class="icon-wa" width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg> Abrir WhatsApp
+          </a>
+        </details>
+      </div>
+    </section>
+
+    <section class="brands wrap" aria-label="Instituciones del programa">
+      <span>Un programa con respaldo</span>
+      <div class="brand-row">
+        <img src="assets/previsora.webp" alt="La Previsora" width="158" height="75">
+        <img src="assets/finagro.webp" alt="FINAGRO" width="171" height="58">
+        <img src="assets/innterra.svg" alt="Innterra" width="156" height="54">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <span class="footer-title">Modelo de Compensación Campesina - MCC</span>
+        <p>Seguro paramétrico de café</p>
+      </div>
+      <div>
+        <strong>Siempre cerca de ti</strong>
+        <a class="footer-whatsapp" href="https://wa.me/573143329279" target="_blank" rel="noopener noreferrer">
+          <svg class="icon-wa" width="18" height="18" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp +57 314 332 9279
+        </a>
+        <span>Respaldo institucional de la Federación Nacional de Cafeteros.</span>
+      </div>
+      <div>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="baja.html">Solicitud de baja</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      Información educativa. Las condiciones del programa determinan la cobertura y la compensación.
+    </div>
+  </footer>
+
+  <a class="floating-help" href="https://wa.me/573143329279" target="_blank" rel="noopener noreferrer" aria-label="Recibir ayuda por WhatsApp">
+    <svg class="icon-wa" width="24" height="24" aria-hidden="true"><use href="#i-wa"/></svg>
+    <span>¿Necesitas ayuda?</span>
+  </a>
+</body>
+</html>

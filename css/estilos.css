@@ -1,0 +1,261 @@
+/*
+ * Estilos del sitio estático de Mercy (MCC).
+ * Copiados de MCC (app/globals.css) sin Tailwind ni las partes de
+ * autodeclaración/administración, con rutas relativas para GitHub Pages.
+ * Agregados al final: pestañas y control de lluvia sin React, íconos SVG
+ * en línea y el formato de las páginas de privacidad y baja.
+ */
+
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/ibm-plex-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600 800;font-display:swap;src:url('../fonts/ibm-plex-sans-latin-600-normal.woff2') format('woff2')}
+
+/* ---- Base ---- */
+*{box-sizing:border-box}
+body{margin:0;font-family:'IBM Plex Sans',Arial,Helvetica,sans-serif;font-size:17px;line-height:1.6;color:#173a2b;background:#fafbf8}
+h1,h2,h3,p{margin-top:0}
+a{text-decoration:none;color:inherit}
+button,input,select{font:inherit}
+button,a,input,select,summary{touch-action:manipulation}
+button{cursor:pointer}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #b27812;outline-offset:4px}
+h1,h2,h3{line-height:1.14;letter-spacing:-.025em}
+h1{font-size:clamp(2.6rem,5vw,4.7rem)}
+h2{font-size:clamp(1.9rem,3.3vw,2.8rem)}
+h3{font-size:1.65rem}
+p{color:#526258}
+img{max-width:100%}
+.wrap{width:min(1180px,calc(100% - 64px));margin-inline:auto}
+
+/* ---- Íconos (lucide y WhatsApp en línea) ---- */
+.icon{display:inline-block;flex-shrink:0;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.icon-wa{display:inline-block;flex-shrink:0;vertical-align:middle;fill:currentColor}
+
+/* ---- Encabezado ---- */
+.site-header{min-height:97px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.header-identity{display:flex;align-items:center;gap:18px;min-width:0}
+.site-brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.site-brand img{display:block;width:56px;height:57px;object-fit:contain}
+.program-heading{border-left:1px solid #d7e0d1;padding-left:18px;max-width:350px}
+.program-heading strong{display:block;font-size:18px;line-height:1.3;letter-spacing:0}
+.program-heading span{display:block;font-size:13px;line-height:1.45;color:#56674e;margin-top:5px}
+.site-header nav{display:flex;gap:31px;align-items:center;font-size:15px;font-weight:600;flex-shrink:0}
+.site-header nav a{min-height:44px;display:flex;align-items:center}
+.site-header .nav-help{gap:8px;border:1px solid #b7c9b6;border-radius:30px;padding:7px 19px}
+.skip-link{position:absolute;top:-100px;left:20px;background:white;z-index:100;padding:15px}
+.skip-link:focus{top:10px}
+
+/* ---- Portada ---- */
+.home-hero{max-width:1440px;margin:auto;display:grid;grid-template-columns:1fr 1fr;background:#e9f0e3;min-height:546px}
+.hero-copy{padding:65px 52px 40px max(32px,calc((100vw - 1180px)/2));align-self:center}
+.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:.16em;color:#376341;margin-bottom:21px}
+h1 em{font-family:Georgia,serif;font-weight:400;color:#398047}
+.hero-copy p{font-size:19px;max-width:410px;margin-bottom:29px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-caption{display:block;font-size:13px;color:#586e51;margin-top:23px}
+.hero-image{background:#739058 url('../assets/coffee-hero.webp') center center/cover;position:relative;min-height:300px}
+.photo-note{position:absolute;bottom:27px;left:27px;right:27px;width:fit-content;border:1px solid #ffffff66;background:#ffffffeb;display:flex;gap:14px;align-items:center;padding:15px 21px;border-radius:12px;font-size:14px;line-height:1.5}
+
+/* ---- Botones ---- */
+.button{border:1px solid transparent;display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:54px;padding:13px 22px;border-radius:9px;font-size:16px;font-weight:700;line-height:1.3;text-align:center}
+.primary{background:#23663b;color:#fff}
+.primary:hover{background:#184a2a}
+.light{background:#fff;border-color:#c7d3c0}
+.light:hover{background:#f3f7ef}
+
+/* ---- Instituciones ---- */
+.brands{display:flex;align-items:center;justify-content:center;gap:52px;min-height:138px;border-bottom:1px solid #dfe5da}
+.brands>span{font-size:13px;color:#68725f}
+.brand-row{display:flex;gap:38px;align-items:center}
+.brand-row img{object-fit:contain;width:145px;height:55px;max-height:55px}
+
+/* ---- Secciones y tarjetas ---- */
+.section{padding-block:69px}
+.section-heading{text-align:center;max-width:680px;margin:0 auto 34px}
+.section-heading .eyebrow{margin-bottom:14px}
+.section-heading h2{margin-bottom:16px}
+.route-cards{display:grid;grid-template-columns:1fr 1fr;gap:25px;max-width:970px;margin:auto}
+.insurance-entry{grid-template-columns:1fr;max-width:730px}
+.insurance-entry .route-card p{max-width:100%}
+.route-card{display:block;background:#fff;border:1px solid #dce5d5;border-radius:17px;padding:33px;transition:box-shadow .15s}
+.route-card:hover{box-shadow:0 8px 24px #173a2b0d}
+.route-card p{font-size:16px;max-width:365px;margin-bottom:21px}
+.icon-circle{width:60px;height:60px;border-radius:50%;background:#e8f0e3;color:#32723f;display:grid;place-items:center;margin-bottom:23px}
+.tag{font-size:11px;letter-spacing:.12em;color:#627057;display:block;margin-bottom:9px;font-weight:bold}
+.card-link{font-size:15px;font-weight:700;color:#23663b;display:block;border-top:1px solid #e4eadf;padding-top:18px}
+.support-band{border-radius:16px;background:#eaf0e4;padding:31px 38px;margin-bottom:67px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.support-band h2{font-size:24px;margin:12px 0}
+.support-band p{max-width:630px;margin:0;font-size:16px}
+.page-intro{padding:50px 0 32px}
+.page-intro h1{font-size:clamp(2.3rem,4vw,3.7rem);max-width:720px}
+.page-intro p{max-width:620px;font-size:19px}
+.breadcrumb{font-size:14px;margin-bottom:24px;color:#69775f}
+.breadcrumb a{text-decoration:underline}
+.narrow{max-width:740px}
+.panel{background:white;border:1px solid #dce5d5;border-radius:16px;padding:30px}
+.notice{background:#eff4eb;border-left:4px solid #619743;border-radius:6px;padding:16px 20px;margin:20px 0;font-size:15px}
+.faq details{border-bottom:1px solid #dce3d5;padding:17px 0}
+.faq summary{font-weight:600;min-height:44px;cursor:pointer}
+.faq details p{margin:12px 0;max-width:740px;font-size:16px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.caption{font-size:13px}
+.text-link{text-decoration:underline;color:#23663b;overflow-wrap:anywhere}
+details summary{cursor:pointer;min-height:44px;font-weight:600}
+details p{margin:12px 0;font-size:16px}
+
+/* ---- Conoce tu seguro ---- */
+.audio-button{display:flex;align-items:center;gap:12px;border:1px solid #c6d3bd;background:#fff;border-radius:10px;padding:13px 18px;min-height:54px;font-weight:600;font-size:15px;color:inherit;text-align:left}
+.audio-button:disabled{opacity:.55;cursor:not-allowed}
+.audio-detail{display:block;font-size:12px;margin-top:2px;font-weight:400;color:#63725b}
+.learn-overview{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+.learn-photo{height:340px;border-radius:15px;background:url('../assets/coffee-hero.webp') center/cover}
+.learn-overview .notice{display:flex;gap:10px;align-items:center}
+.three-col .panel h3{font-size:22px;margin:18px 0 13px}
+.three-col .panel p{font-size:16px;margin-bottom:0}
+.step-number{float:right;font-size:13px;font-weight:bold;color:#6d785e}
+.calculation-agent-logo{display:block;width:40px;height:40px;object-fit:contain;margin-bottom:12px}
+
+.rain-section{background:#eaf0e3;padding:64px 0}
+.rain-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:75px;align-items:center}
+.rain-tabs{display:flex;width:100%;gap:4px;padding:5px;background:#dbe7d0;border-radius:12px}
+.rain-tabs button{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:6px 10px;border:0;border-radius:8px;background:transparent;color:#36502e;font-size:14px;font-weight:600;white-space:normal;line-height:1.25}
+.rain-tabs button[aria-selected=true]{background:white;color:#1f4f32;box-shadow:0 1px 3px #173a2b1f}
+.tab-panel{margin-top:8px}
+.tab-panel[hidden]{display:none}
+.rain-example{background:white;border:1px solid #d3dfc8;border-radius:15px;padding:29px}
+.rain-top{display:flex;gap:16px;align-items:center}
+.rain-top .icon-circle{margin:0;width:47px;height:47px;flex-shrink:0}
+.rain-top h3{font-size:22px;margin:0 0 5px}
+.rain-top p{font-size:14px;margin:0}
+.rain-chart{display:flex;height:208px;gap:15px;align-items:stretch;margin:27px 0}
+.rain-axis{display:flex;flex-direction:column;justify-content:space-between;font-size:11px;color:#53664c;width:46px;flex-shrink:0}
+.rain-bars{position:relative;flex:1;border-bottom:2px solid #5c7751;background:repeating-linear-gradient(to top,#f3f6f0 0,#f3f6f0 49.5%,#dbe7d3 50%);border-radius:8px 8px 0 0;overflow:visible}
+.rain-fill{position:absolute;bottom:0;left:0;right:0;background:#b3d6e5;border-radius:7px 7px 0 0;transition:height .1s}
+.rain-reference{position:absolute;left:-3px;right:-3px;border-top:2px dashed #7a6334;z-index:2}
+.rain-reference span{position:absolute;right:4px;bottom:5px;background:#fffcebe6;padding:2px 6px;font-size:11px;white-space:nowrap;color:#705a25}
+.rain-value{position:absolute;top:12px;left:13px;font-weight:bold;font-size:25px;color:#24455c}
+.rain-value small{font-size:12px}
+.crop-marker{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;color:#49733c;font-size:11px;width:46px}
+.slider-label{font-size:15px;font-weight:bold;display:block;margin-bottom:18px}
+
+/* Control de lluvia: input range nativo con el aspecto del slider de MCC */
+.rain-slider{--pct:40%;-webkit-appearance:none;appearance:none;display:block;width:100%;height:40px;margin:0;background:transparent;cursor:pointer}
+.rain-slider::-webkit-slider-runnable-track{height:8px;border-radius:8px;background:linear-gradient(to right,#23663b var(--pct),#e0ead8 var(--pct))}
+.rain-slider::-moz-range-track{height:8px;border-radius:8px;background:#e0ead8}
+.rain-slider::-moz-range-progress{height:8px;border-radius:8px;background:#23663b}
+.rain-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:white;border:3px solid #23663b;box-shadow:0 1px 3px #0003}
+.rain-slider::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:white;border:3px solid #23663b;box-shadow:0 1px 3px #0003}
+.rain-slider:focus-visible{outline:3px solid #b27812;outline-offset:4px}
+
+.slider-ends{display:flex;justify-content:space-between;font-size:12px;color:#61705a;margin:4px 0 20px}
+.rain-status{padding:15px;display:flex;gap:12px;align-items:center;background:#f3f5ef;border-radius:8px;min-height:83px;font-size:15px}
+.rain-status.is-active{background:#e6f1df}
+.rain-status small{display:block;font-size:13px;color:#53644c}
+.compensation-example{margin-top:20px;padding-top:17px;border-top:1px solid #dfe7d7}
+.compensation-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:14px}
+.compensation-heading>span{font-size:12px;color:#48663c;text-align:right}
+.compensation-meter{height:15px;margin-top:12px;background:#e5ebdf;border-radius:8px;overflow:hidden}
+.compensation-meter>span{display:block;height:100%;background:#398047;border-radius:8px;transition:width .15s}
+.compensation-ends{display:flex;justify-content:space-between;font-size:12px;color:#61705a;margin-top:6px}
+.compensation-example p{font-size:13px;line-height:1.5;margin:12px 0 0;color:#48613d}
+.example-notice{font-size:12px;line-height:1.5;background:#fff9e8;border:1px solid #eee1bf;border-radius:7px;padding:12px;margin-top:17px;color:#715e31}
+
+/* ---- Privacidad y baja ---- */
+.legal h2{font-size:1.45rem;margin:34px 0 12px;letter-spacing:-.01em}
+.legal h2:first-child{margin-top:0}
+.legal h3{font-size:1.12rem;margin:22px 0 8px;letter-spacing:0}
+.legal p,.legal li{font-size:16px;color:#526258}
+.legal ul{padding-left:22px;margin:0 0 14px}
+.legal li{margin:6px 0}
+.legal li strong,.legal p strong{color:#244a32}
+.legal .plain-list{list-style:none;padding-left:0}
+.legal .highlight-box{border:2px solid #23663b;border-radius:12px;padding:22px;margin:20px 0}
+.legal .highlight-box h3{margin-top:0;color:#23663b}
+.legal .quote{background:#eff4eb;border-radius:6px;padding:12px 14px;font-family:ui-monospace,Consolas,monospace;font-size:14px}
+.legal-intro{margin-bottom:24px}
+.legal-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* ---- Pie de página ---- */
+.site-footer{background:#183a2b;color:#e8eddf;padding:44px 0 27px}
+.footer-grid{display:grid;grid-template-columns:1.1fr 1.3fr 1fr;gap:45px;font-size:13px}
+.footer-grid a,.footer-grid span{display:block;margin:10px 0}
+.footer-grid a:hover{text-decoration:underline}
+.footer-grid p{color:#c8d4c3;font-size:14px}
+.footer-grid a.footer-whatsapp{display:flex;align-items:center;gap:8px}
+.footer-title{font-size:23px;line-height:1.3;font-weight:700}
+.footer-bottom{border-top:1px solid #ffffff22;margin-top:30px;padding-top:21px;font-size:12px;color:#b7c9b6}
+.floating-help{position:fixed;z-index:40;bottom:21px;right:24px;background:#23663b;color:white;display:flex;align-items:center;gap:10px;min-height:52px;padding:11px 20px;border-radius:28px;box-shadow:0 4px 18px #0b371e2c;font-size:14px;font-weight:bold}
+
+/* ---- Adaptación a pantallas ---- */
+@media(max-width:900px){
+  .hero-copy{padding:38px 28px}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .brands{gap:20px}
+  .brand-row{gap:25px}
+  .footer-grid{gap:25px}
+  .three-col{grid-template-columns:1fr}
+  .support-band{flex-direction:column;align-items:flex-start}
+  .rain-layout{gap:35px}
+  .learn-overview{gap:30px}
+  .site-header{flex-wrap:wrap;padding-block:18px}
+  .site-header nav{gap:20px}
+  .program-heading{max-width:340px}
+  .header-identity{flex:1 0 65%}
+}
+@media(max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  .site-header{min-height:112px;padding:17px 0;gap:13px}
+  .header-identity{flex-basis:100%;gap:13px}
+  .site-brand img{width:44px;height:45px}
+  .program-heading{padding-left:13px;flex:1;max-width:none}
+  .program-heading strong{font-size:16px}
+  .program-heading span{font-size:12px}
+  .site-header nav{width:100%;justify-content:space-between;gap:8px;font-size:14px;align-items:stretch}
+  .site-header nav a{min-height:44px;line-height:1.3}
+  .site-header nav>a:first-child{flex:1}
+  .site-header .nav-help{font-size:13px;white-space:nowrap;flex:0 0 auto;padding:5px 11px}
+  .home-hero{grid-template-columns:1fr}
+  .hero-copy{padding:36px 23px 28px}
+  .hero-copy h1{font-size:2.9rem}
+  .hero-copy p{font-size:17px}
+  .hero-actions{flex-direction:row;align-items:stretch}
+  .hero-actions .button{flex:1;font-size:14px;padding:12px 11px}
+  .hero-actions .button svg{display:none}
+  .hero-image{min-height:248px;background-position:center 50%}
+  .photo-note{bottom:16px;left:18px;padding:10px 14px;font-size:12px}
+  .brands{flex-direction:column;gap:12px;padding:24px 0;min-height:120px}
+  .brand-row{width:100%;gap:12px;justify-content:space-between}
+  .brand-row img{width:29%;height:42px;max-width:29%;max-height:42px}
+  .section{padding-block:42px}
+  .section-heading{text-align:left}
+  .route-cards,.two-col{grid-template-columns:1fr}
+  .route-card{padding:25px}
+  .route-card h3{font-size:1.5rem}
+  .support-band{padding:26px;margin-bottom:42px}
+  .support-band .button{width:100%}
+  .footer-grid{grid-template-columns:1fr;gap:18px}
+  .site-footer{padding-bottom:90px}
+  .floating-help{right:14px;bottom:14px;padding:11px 15px;font-size:12px}
+  .page-intro{padding-top:28px}
+  .page-intro h1{font-size:2.3rem}
+  .page-intro p{font-size:17px}
+  .page-intro .audio-button{width:fit-content}
+  .panel{padding:22px}
+  .notice{padding:13px;font-size:14px}
+  .learn-overview,.rain-layout{grid-template-columns:1fr}
+  .learn-photo{height:230px}
+  .rain-section{padding:40px 0}
+  .rain-example{padding:21px}
+  .rain-tabs button{font-size:12px;gap:6px}
+  .rain-reference span{font-size:10px}
+  .rain-top h3{font-size:20px}
+  .rain-top p{font-size:13px}
+  .rain-chart{height:180px}
+  .rain-axis{width:39px}
+  .crop-marker{width:33px}
+  .rain-layout{gap:25px}
+  .compensation-heading{align-items:flex-start}
+  .compensation-heading strong{max-width:155px}
+  .legal-actions .button{width:100%}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
